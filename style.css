@@ -1,0 +1,388 @@
+body {
+    background: #f7f8fc;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #1e2340;
+}
+
+.navbar-brand .logo-dot {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #6c5ce7;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 6px;
+}
+
+.nav-link {
+    color: #1e2340;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #6c5ce7;
+}
+
+.btn-contact {
+    background: linear-gradient(#6675F7, #57007B);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 22px;
+    border: none;
+}
+
+.btn-contact:hover {
+    background: linear-gradient(#6675F7, #57007B);
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: #1e2340;
+    line-height: 1.2;
+}
+
+.accent {
+    color: #6c5ce7;
+}
+
+.hero p {
+    color: #5b6172;
+    font-size: 1.1rem;
+    max-width: 480px;
+    margin-top: 18px;
+}
+
+.btn-cta {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 30px;
+    margin-top: 28px;
+}
+
+.btn-cta:hover {
+    background: #1d4ed8;
+    color: #fff;
+}
+
+/* Simple fade-in animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp .7s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: .1s;
+}
+
+.delay-2 {
+    animation-delay: .25s;
+}
+
+.delay-3 {
+    animation-delay: .4s;
+}
+
+.delay-4 {
+    animation-delay: .55s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Illustration */
+.illustration-wrap {
+    text-align: center;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.float {
+    animation: floaty 3.5s ease-in-out infinite;
+}
+
+@keyframes floaty {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fade-up,
+    .float {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
+ /* ---------- SERVICES SECTION ---------- */
+  .services-section{
+    padding:40px 0 60px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .services-section h2{
+    font-weight:800;
+    font-size:2.4rem;
+    color:#1e2340;
+    margin:20px 0 50px;
+  }
+
+  .carousel-viewport{
+    max-width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+  }
+  .carousel-track{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+    position:relative;
+    transition:transform .4s ease;
+  }
+
+  .service-card{
+    background:#fff;
+    border-radius:14px;
+    padding:30px 24px;
+    text-align:left;
+    flex:0 0 300px;
+    opacity:.45;
+    transform:scale(.92);
+    transition:all .4s ease;
+    border:1px solid transparent;
+  }
+  .service-card.active{
+    opacity:1;
+    transform:scale(1.05);
+    border:1px solid #d7455f;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+  }
+
+  .service-icon{
+    width:56px;height:56px;
+    border-radius:50%;
+    border:1px solid #d0d3e0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    color:#2563eb;
+    margin-bottom:18px;
+  }
+  .service-card.active .service-icon{
+    color:#d7455f;
+    border-color:#d7455f;
+  }
+
+  .service-card h3{
+    font-size:1.25rem;
+    font-weight:700;
+    color:#1e2340;
+    margin-bottom:12px;
+  }
+  .service-card.active h3{
+    color:#d7455f;
+  }
+
+  .service-card p{
+    font-size:.92rem;
+    color:#6b7080;
+    line-height:1.5;
+    max-width:none;
+    margin:0;
+  }
+
+  .carousel-controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    margin-top:40px;
+  }
+  .carousel-progress{
+    position:relative;
+    width:220px;
+    height:2px;
+    background:#dcdde5;
+  }
+  .carousel-progress-fill{
+    position:absolute;
+    left:0;top:0;
+    height:2px;
+    background:#1e2340;
+    transition:width .4s ease;
+    width:20%;
+  }
+  .carousel-num{
+    font-weight:600;
+    color:#1e2340;
+    font-size:.9rem;
+  }
+
+  .carousel-arrow{
+    background:#fff;
+    border:1px solid #d0d3e0;
+    border-radius:50%;
+    width:44px;height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all .25s ease;
+    text-decoration:none;
+    color:#1e2340;
+    flex-shrink:0;
+  }
+  .carousel-arrow:hover{
+    background:#1e2340;
+    color:#fff;
+    border-color:#1e2340;
+  }
+
+  
+  .carousel-radio{
+    display:none;
+  }
+
+  .dot{
+    width:10px;height:10px;
+    border-radius:50%;
+    background:#d0d3e0;
+    display:inline-block;
+    cursor:pointer;
+  }
+
+  /* Har bir radio holatiga mos track siljishi (desktop: karta 300px + gap 24px = 324px qadam) */
+  #s0:checked ~ .carousel-row .carousel-track{ transform:translateX(648px); }
+  #s1:checked ~ .carousel-row .carousel-track{ transform:translateX(324px); }
+  #s2:checked ~ .carousel-row .carousel-track{ transform:translateX(0); }
+  #s3:checked ~ .carousel-row .carousel-track{ transform:translateX(-324px); }
+  #s4:checked ~ .carousel-row .carousel-track{ transform:translateX(-648px); }
+
+  /* Aktiv kartani belgilash (radio holatiga qarab mos karta) */
+  #s0:checked ~ .carousel-row .service-card:nth-child(1),
+  #s1:checked ~ .carousel-row .service-card:nth-child(2),
+  #s2:checked ~ .carousel-row .service-card:nth-child(3),
+  #s3:checked ~ .carousel-row .service-card:nth-child(4),
+  #s4:checked ~ .carousel-row .service-card:nth-child(5){
+    opacity:1;
+    transform:scale(1.05);
+    border:1px solid #d7455f;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+  }
+  #s0:checked ~ .carousel-row .service-card:nth-child(1) .service-icon,
+  #s1:checked ~ .carousel-row .service-card:nth-child(2) .service-icon,
+  #s2:checked ~ .carousel-row .service-card:nth-child(3) .service-icon,
+  #s3:checked ~ .carousel-row .service-card:nth-child(4) .service-icon,
+  #s4:checked ~ .carousel-row .service-card:nth-child(5) .service-icon{
+    color:#d7455f;
+    border-color:#d7455f;
+  }
+  #s0:checked ~ .carousel-row .service-card:nth-child(1) h3,
+  #s1:checked ~ .carousel-row .service-card:nth-child(2) h3,
+  #s2:checked ~ .carousel-row .service-card:nth-child(3) h3,
+  #s3:checked ~ .carousel-row .service-card:nth-child(4) h3,
+  #s4:checked ~ .carousel-row .service-card:nth-child(5) h3{
+    color:#d7455f;
+  }
+
+  /* Progress chiziq kengligi */
+  #s0:checked ~ .carousel-controls .carousel-progress-fill{ width:10%; }
+  #s1:checked ~ .carousel-controls .carousel-progress-fill{ width:30%; }
+  #s2:checked ~ .carousel-controls .carousel-progress-fill{ width:50%; }
+  #s3:checked ~ .carousel-controls .carousel-progress-fill{ width:70%; }
+  #s4:checked ~ .carousel-controls .carousel-progress-fill{ width:90%; }
+
+  /* Aktiv dot rangi */
+  #s0:checked ~ .carousel-controls label[for="s0"],
+  #s1:checked ~ .carousel-controls label[for="s1"],
+  #s2:checked ~ .carousel-controls label[for="s2"],
+  #s3:checked ~ .carousel-controls label[for="s3"],
+  #s4:checked ~ .carousel-controls label[for="s4"]{
+    background:#d7455f;
+  }
+
+  /* Strelkalar: faqat joriy holatga mos prev/next ko'rinadi */
+  .arrow-prev, .arrow-next{
+    display:none;
+  }
+  #s0:checked ~ .carousel-row .prev-s0,
+  #s0:checked ~ .carousel-row .next-s0,
+  #s1:checked ~ .carousel-row .prev-s1,
+  #s1:checked ~ .carousel-row .next-s1,
+  #s2:checked ~ .carousel-row .prev-s2,
+  #s2:checked ~ .carousel-row .next-s2,
+  #s3:checked ~ .carousel-row .prev-s3,
+  #s3:checked ~ .carousel-row .next-s3,
+  #s4:checked ~ .carousel-row .prev-s4,
+  #s4:checked ~ .carousel-row .next-s4{
+    display:inline-flex;
+  }
+
+  @media (max-width: 767px){
+    .service-card{flex:0 0 240px;padding:22px 18px;}
+    .services-section h2{font-size:1.8rem;}
+
+    /* Mobil qadam: karta 240px + gap 24px = 264px */
+    #s0:checked ~ .carousel-row .carousel-track{ transform:translateX(528px); }
+    #s1:checked ~ .carousel-row .carousel-track{ transform:translateX(264px); }
+    #s2:checked ~ .carousel-row .carousel-track{ transform:translateX(0); }
+    #s3:checked ~ .carousel-row .carousel-track{ transform:translateX(-264px); }
+    #s4:checked ~ .carousel-row .carousel-track{ transform:translateX(-528px); }
+  }

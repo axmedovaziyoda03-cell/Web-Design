@@ -14,7 +14,11 @@ body {
     font-weight: 700;
     font-size: 1.3rem;
     color: #1e2340;
+    display: flex;
+    gap: 6px;
 }
+
+
 
 .navbar-brand .logo-dot {
     display: inline-block;
@@ -50,6 +54,8 @@ body {
     background: linear-gradient(#6675F7, #57007B);
     color: #fff;
 }
+
+
 
 /* HERO */
 .hero {

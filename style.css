@@ -457,42 +457,73 @@ body {
 
 /* ===== Hero ===== */
 .hero-section {
-  padding: 100px 0 70px;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+
 }
 
-.eyebrow-rule {
-  width: 52px;
-  height: 4px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
-  margin-bottom: 18px;
+  
+
+.hero-image img{
+  max-width: 70%;
+  height: auto;
+  border-radius: 16px;
 }
 
-.eyebrow-text {
-  font-size: 24px;
-  color: var(--ink);
+  
+
+
+/* Sarlavha - "Leading companies trust us" */
+.hero-title {
+  font-size: 40px;
+  font-weight: 400; /* yupqa/oddiy */
+  color: #1a1a2e; /* to'q ko'k-qora rang */
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+/* Ikkinchi qator - "to develop software" (qalin) */
+.hero-title-bold {
+  font-size: 38px;
+  font-weight: 700; /* qalin */
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+/* Asosiy matn paragraf */
+.hero-text {
+  font-size: 17px;
+  font-weight: 400;
+  color: #6b7280; /* kulrang */
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 550px;
+}
+
+/* Matn ichidagi urg'u berilgan qism - "add development capacity" */
+.hero-text .highlight {
+  color: #a91d4f; /* to'q pushti-qizil, logotip rangiga mos */
   font-weight: 400;
 }
 
-.hero-title {
-  font-size: 2.4rem;
-  font-weight: 70;
-  line-height: 1.2;
-  margin-bottom: 22px;
+/* "See more Informations" havolasi */
+.hero-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a2e;
+  text-decoration: none;
+  
+  align-items: center;
+  gap: 8px;
 }
 
-.hero-copy {
-  color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.85;
-  max-width: 520px;
-  margin-bottom: 28px;
-}
-
-.hero-copy .highlight {
-  background: rgb(#F76680, #57007B,);
-  font-weight: 500;
+.hero-link:hover {
+  color: #a91d4f;
 }
 
 .link-more {

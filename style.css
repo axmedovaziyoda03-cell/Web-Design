@@ -114,9 +114,7 @@ body {
   animation-delay: .4s;
 }
 
-.delay-4 {
-  animation-delay: .55s;
-}
+
 
 @keyframes fadeUp {
   to {
@@ -131,14 +129,13 @@ body {
 }
 
 .hero-img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 16px;
 }
 
-.float {
-  animation: floaty 3.5s ease-in-out infinite;
-}
+
+
 
 @keyframes floaty {
 
@@ -457,3 +454,482 @@ body {
     transform: translateX(-528px);
   }
 }
+
+/* ===== Hero ===== */
+.hero-section {
+  padding: 100px 0 70px;
+  position: relative;
+}
+
+.eyebrow-rule {
+  width: 52px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
+  margin-bottom: 18px;
+}
+
+.eyebrow-text {
+  font-size: 24px;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 70;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.hero-copy {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.hero-copy .highlight {
+  background: rgb(#F76680, #57007B,);
+  font-weight: 500;
+}
+
+.link-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #57007B;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.link-more:hover {
+  color: #57007B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* carusel section */
+:root {
+  --purple: #7B1FA2;
+  --pink: #E91E8C;
+  --dark: #1a1a1a;
+  --muted: #8a8a8a;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--dark);
+  background: #fff;
+}
+
+/* ---------- HEADER ---------- */
+.hero-section {
+  padding: 60px 6% 40px;
+}
+
+.eyebrow-line {
+  width: 40px;
+  height: 4px;
+  background: var(--pink);
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.hero-title strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--dark);
+  font-weight: 800;
+}
+
+/* ---------- Circle arrow buttons (used for both carousels) ---------- */
+.arrow-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--purple);
+  color: var(--purple);
+  background: #fff;
+  opacity: 1;
+  transition: all .25s ease;
+}
+
+.arrow-btn.filled {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+.arrow-btn:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+/* hide default bootstrap icon, we draw our own arrow glyph */
+.arrow-btn .carousel-control-prev-icon,
+.arrow-btn .carousel-control-next-icon {
+  display: none;
+}
+
+.arrow-btn::after {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.arrow-btn.prev-glyph::after {
+  content: "\2190";
+}
+
+.arrow-btn.next-glyph::after {
+  content: "\2192";
+}
+
+/* ---------- LOGO CAROUSEL ---------- */
+.logo-strip {
+  background: #fdfdfd;
+  padding: 30px 0;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.logo-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #333;
+  opacity: .85;
+}
+
+.logo-badge .mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f2eaf6;
+  color: var(--purple);
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+/* ---------- TESTIMONIAL SECTION ---------- */
+.testimonial-section {
+  padding: 70px 6% 90px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.section-title strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--dark);
+  font-weight: 800;
+}
+
+.quote-mark {
+  font-size: 3rem;
+  color: var(--pink);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.quote-text {
+  max-width: 560px;
+  margin: 0 auto;
+  color: #777;
+  font-size: 1rem;
+  line-height: 1.8;
+  min-height: 110px;
+}
+
+.testimonial-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* ---------- AVATAR ROW (per slide) ---------- */
+.avatar-track {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 40px;
+}
+
+/* order-based centering (no JS): each slide assigns these
+     classes to its 5 avatar-items so the active one always
+     lands in the middle slot (order:3) */
+.ord-1 {
+  order: 1;
+}
+
+.ord-2 {
+  order: 2;
+}
+
+.ord-3 {
+  order: 3;
+}
+
+.ord-4 {
+  order: 4;
+}
+
+.ord-5 {
+  order: 5;
+}
+
+.avatar-item {
+  text-align: center;
+  opacity: .55;
+  transform: scale(0.85);
+}
+
+.avatar-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.avatar-item.is-active {
+  opacity: 1;
+  transform: scale(1.15) translateY(-6px);
+}
+
+.avatar-item.is-active .avatar-circle {
+  width: 80px;
+  height: 80px;
+  font-size: 1.3rem;
+
+  box-shadow: 0 6px 18px rgba(233, 30, 140, .25);
+}
+
+.stars {
+  color: #f5b301;
+  font-size: .8rem;
+  margin-top: 8px;
+}
+
+.avatar-name {
+  font-size: .85rem;
+  font-weight: 700;
+  margin-top: 4px;
+  color: #bbb;
+}
+
+.avatar-role {
+  font-size: .72rem;
+  color: #ccc;
+}
+
+.avatar-item.is-active .avatar-name {
+  color: var(--purple);
+}
+
+.avatar-item.is-active .avatar-role {
+  color: #999;
+}
+
+/* ---------- Custom Bootstrap indicators (dots) ---------- */
+.carousel-indicators-custom {
+  position: static;
+  margin-top: 24px;
+}
+
+.carousel-indicators-custom [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  opacity: 1;
+  border: 0;
+  margin: 0 4px;
+}
+
+.carousel-indicators-custom .active {
+  background: var(--purple);
+  width: 22px;
+  border-radius: 5px;
+}
+
+
+
+/* ---------- RESPONSIVE (mobile) ---------- */
+@media (max-width: 767px) {
+
+  .hero-section {
+    padding: 40px 6% 24px;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-title strong {
+    font-size: 1.6rem;
+  }
+
+  /* 1) Logo carousel: keep logos side by side in one row,
+          scrollable horizontally like a carousel/slider */
+  .logo-row {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .logo-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .logo-badge {
+    flex: 0 0 auto;
+    font-size: .9rem;
+    white-space: nowrap;
+  }
+
+  .logo-badge .mark {
+    width: 30px;
+    height: 30px;
+    font-size: .75rem;
+  }
+
+  /* 2) Testimonial carousel: clip overflow so the active
+          (centered) avatar stays in the middle and neighboring
+          avatars peek in / get cropped at the edges */
+  .testimonial-section {
+    padding: 50px 0 70px;
+    overflow-x: hidden;
+  }
+
+  .testimonial-row {
+    gap: 14px;
+    padding: 0 4px;
+  }
+
+  .quote-text {
+    max-width: 82%;
+    font-size: .92rem;
+    line-height: 1.7;
+    min-height: auto;
+  }
+
+  .arrow-btn {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+  }
+
+  .avatar-track {
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .avatar-circle {
+    width: 52px;
+    height: 52px;
+    font-size: .9rem;
+  }
+
+  .avatar-item.is-active .avatar-circle {
+    width: 66px;
+    height: 66px;
+    font-size: 1.05rem;
+  }
+
+  .avatar-name {
+    font-size: .75rem;
+  }
+
+  .avatar-role {
+    font-size: .65rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .quote-text {
+    max-width: 90%;
+  }
+
+  .avatar-track {
+    gap: 10px;
+  }
+
+  .quote-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .arrow-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .avatar-circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .avatar-name {
+    font-size: 12px;
+  }
+
+  .avatar-role {
+    font-size: 10px;
+  }
+
+  .stars {
+    font-size: 11px;
+  }
+}
+
+/* carusel section */
